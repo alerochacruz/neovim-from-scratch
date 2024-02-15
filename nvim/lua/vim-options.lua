@@ -1,7 +1,7 @@
 vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n', '<leader>pv', ':tabe .<CR>', {})
 vim.api.nvim_set_keymap('n', 'q', '', {})
-vim.api.nvim_set_keymap('n', 'yy', 'y$', {})
+-- vim.api.nvim_set_keymap('n', 'yy', 'y$', {})
 vim.api.nvim_set_keymap('n', '<leader>b', ':b<space><C-D>', {})
 vim.api.nvim_set_keymap('v', '<Leader>y', "<Esc>:'<,'>w !xclip -sel clip -r<CR><CR>", {})
 vim.api.nvim_set_keymap('n', '<Leader>yw', [[ :r !cat % | xclip -sel clip -r<CR> ]], {})

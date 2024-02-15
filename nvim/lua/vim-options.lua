@@ -26,9 +26,9 @@ if vim.fn.has("termguicolors") then
 	vim.o.termguicolors = true
 end
 
-vim.o.path = vim.o.path .. ',**'
+vim.opt.path:append('**')
 vim.o.wildmenu = true
-vim.o.wildignore = vim.o.wildignore .. ',**/node_modules/**'
+vim.opt.wildignore:append('**/node_modules/**')
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.wo.relativenumber = true

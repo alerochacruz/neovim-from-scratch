@@ -34,6 +34,7 @@ return {
           "cssls", -- CSS
           "html", -- HTML
           "bashls", -- Bash
+          "emmet_language_server",
         },
       })
     end,
@@ -43,6 +44,7 @@ return {
     lazy = false,
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
       local lspconfig = require("lspconfig")
 
       lspconfig.lua_ls.setup({
@@ -64,6 +66,9 @@ return {
         capabilities = capabilities,
       })
       lspconfig.bashls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.emmet_language_server.setup({
         capabilities = capabilities,
       })
 

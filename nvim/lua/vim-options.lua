@@ -44,4 +44,5 @@ augroup END
 vim.api.nvim_set_keymap('n', '<F5>', '"=strftime("%c")<CR>P', {})
 vim.api.nvim_set_keymap('i', '<F5>', '<C-R>=strftime("%c")<CR>', {})
 vim.o.listchars = vim.o.listchars .. ',space:␣'
+vim.o.listchars = vim.o.listchars .. ',eol:$'
 

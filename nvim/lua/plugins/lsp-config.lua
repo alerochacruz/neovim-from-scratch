@@ -11,13 +11,13 @@ return {
     config = function()
       require("mason-tool-installer").setup({
         ensure_installed = {
-          "stylua",
-          "prettier",
-          "eslint_d",
-          "black",
-          "isort",
-          "beautysh",
-          "rubocop",
+          "stylua",   -- Lua Formatter
+          "prettier", -- CSS Formatter
+          -- "eslint_d",
+          "black",    -- Python Formatter
+          "isort",    -- Python Formatter
+          "beautysh", -- Bash Formatter
+          "rubocop",  -- Ruby Linter/Formatter
         },
       })
     end,
@@ -27,14 +27,15 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {
-          "lua_ls", -- Lua
-          "tsserver", -- JavaScript
-          "jedi_language_server", -- Python
-          "intelephense", -- PHP
-          "cssls", -- CSS
-          "html", -- HTML
-          "bashls", -- Bash
-          "emmet_language_server",
+          "lua_ls",                -- Lua LSP
+          "tsserver",              -- JavaScript LSP
+          "jedi_language_server",  -- Python LSP
+          "intelephense",          -- PHP LSP
+          "cssls",                 -- CSS LSP
+          "html",                  -- HTML LSP
+          "bashls",                -- Bash LSP
+          "emmet_language_server", -- Emmet LSP
+          "eslint",                -- ESLint LSP
         },
       })
     end,
@@ -69,6 +70,9 @@ return {
         capabilities = capabilities,
       })
       lspconfig.emmet_language_server.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.eslint.setup({
         capabilities = capabilities,
       })
 

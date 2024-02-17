@@ -18,6 +18,7 @@ vim.o.shiftwidth = 2
 vim.o.expandtab = true
 vim.wo.number = true
 vim.o.laststatus = 3
+vim.opt.winbar = '%=%=%m %f'
 vim.opt.showmode = false
 vim.o.ignorecase = true
 vim.o.smartcase = true
